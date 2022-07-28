@@ -1,0 +1,43 @@
+Debugging Python code using breakpoint() and pdb
+
+
+1) breakpoint()           # in Python 3.7 
+        
+2) import pdb; pdb.set_trace()   # in Python 3.6 and below
+-----------------------------------------------------------------------------------------------------------------------
+Method #1 : Using breakpoint() function
+In this method, we simply introduce the breakpoint where you have doubt or somewhere you want to check for bugs or errors.
+
+def debugger(a, b):
+    breakpoint()
+    result = a / b
+    return result
+  
+print(debugger(5, 0))
+
+-------------------------------------
+
+In order to run the debugger just type c and press enter.
+
+------------------------------------
+Commands for debugging :
+
+c -> continue execution
+q -> quit the debugger/execution
+n -> step to next line within the same function
+s -> step to next line in this function or a called function
+--------------------------------------------------------------------------------------------------------------------------
+#########################################################################################################################
+Method #2 : Using pdb module
+As the same suggests, PDB means Python debugger. To use the PDB in the program we have to use one of its method named set_trace(). Although this will result the same but this the another way to introduce the debugger in python version 3.6 and below.
+
+def debugger(a, b):
+    import pdb; pdb.set_trace()
+    result = a / b
+    return result
+  
+print(debugger(5, 0))
+------------------------------
+In order to run the debugger just type c and press enter.
+
+---------------------------------------------------------------------------------------------------------------------------
